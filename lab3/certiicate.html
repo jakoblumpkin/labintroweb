@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            window.onload = function() {
+                function makeCert() {
+                  var firstName = document.getElementById('first').value;
+                  var lastName = document.getElementById('last').value;
+                  var email = document.getElementById('email').value;
+
+                  var output = "";
+                  output = "<h1>THIS CERTIFIES THAT</h1>";
+                  output += "<h2>" + firstName + " " + lastName + "</h2>";
+                  output += "<h3>" + email + "</h3>";
+                  output += "<p>has completed the course Introduction to Web <em>Development</em> from LearnToProgram, Inc.</p>";
+
+                  document.getElementById("result").innerHTML = output;
+                }
+
+
+                document.getElementById("makeCert").addEventListener('click', makeCert, false);
+            }
+        </script>
+
+        <style>
+            div {
+                width: 500px;
+                background-color: #cfcdc3;
+                text-align: center;
+                border: thin solid black;
+            }
+
+            h1, h2, h3 {
+                font-family: Arial, sans-serif;
+            }
+
+            h3 {
+                font-size: 1.25em;
+            }
+        </style>
+        <title>Lab Three-- Interact</title>
+    </head>
+    <body>
+        <label for = "first">First</label><input type="text" name="first" id="first"/><br/>
+        <label for = "last">Last</label><input type="text" name="last" id="last" /><br/>
+        <label for = "email">Email</label><input type="text" name="email" id="email"/><br/>
+        <button id = "makeCert">Make Certificate</button>
+        <div id="result"></div>
+    </body>
+</html>
